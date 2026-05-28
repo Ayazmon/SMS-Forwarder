@@ -1,0 +1,196 @@
+---
+layout: null
+title: Terms of Service
+include_in_header: false
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Terms of Service</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #FFFFFF;
+    --fg: #07132 6;
+    --muted: #3A6090;
+    --border: #C2D5EE;
+    --accent: #3B82F6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #060D1A;
+      --fg: #E0ECFF;
+      --muted: #6C8EBA;
+      --border: #1B2E47;
+      --accent: #3B82F6;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: -apple-system-body;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    padding: 24px max(env(safe-area-inset-left), 20px) 32px max(env(safe-area-inset-right), 20px);
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    letter-spacing: -0.4px;
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 28px 0 8px;
+    letter-spacing: -0.2px;
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 20px 0 6px;
+  }
+  p, li { font-size: 15px; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  .updated {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 0 0 24px;
+  }
+  .note {
+    border-left: 3px solid var(--accent);
+    padding: 10px 14px;
+    background: color-mix(in oklab, var(--accent) 8%, transparent);
+    border-radius: 6px;
+    font-size: 14px;
+    margin: 16px 0;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 32px 0;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  strong { font-weight: 600; }
+</style>
+</head>
+<body>
+
+<h1>Terms of Service</h1>
+<p class="updated">Last updated: May 4, 2026</p>
+
+<p>These Terms of Service ("<strong>Terms</strong>") govern your access to and use of the SMS Forwarder mobile application (the "<strong>App</strong>"), provided by the developer of SMS Forwarder (the "<strong>Developer</strong>", "we", "us", or "our"). By downloading, installing, or using the App, you agree to be bound by these Terms. If you do not agree, do not use the App.</p>
+
+<h2>1. Service Description</h2>
+<p>SMS Forwarder is a utility that lets you build forwarding rules so that incoming SMS text messages on your iPhone can be routed to destinations you configure (such as email addresses or webhook endpoints), with the help of Apple's Shortcuts automation. The App stores your forwarding rules and preferences and integrates with the Apple App Store for in-app subscription purchases.</p>
+
+<h2>2. Eligibility</h2>
+<p>You must be at least 13 years old (or the minimum age required for use of online services in your country) and capable of forming a binding contract to use the App. By using the App you represent and warrant that you meet these requirements.</p>
+
+<h2>3. Your Account and License</h2>
+<p>Subject to your compliance with these Terms, the Developer grants you a limited, non-exclusive, non-transferable, revocable license to install and use the App on Apple-branded devices that you own or control, solely for your personal, non-commercial use. All rights not expressly granted to you are reserved.</p>
+<p>You agree not to:</p>
+<ul>
+  <li>Reverse engineer, decompile, or disassemble the App, except to the extent that such restriction is expressly prohibited by applicable law;</li>
+  <li>Resell, rent, sublicense, or distribute the App;</li>
+  <li>Use the App to forward messages you do not have the right to access, or in a manner that violates the privacy or rights of any other person;</li>
+  <li>Use the App to send unsolicited bulk messages, spam, or unlawful content;</li>
+  <li>Bypass, disable, or interfere with security features of the App or the Apple ecosystem.</li>
+</ul>
+
+<h2>4. Subscription Terms</h2>
+<p>The App offers auto-renewable subscriptions purchased through your Apple App Store account. The following terms apply to all subscriptions:</p>
+<ul>
+  <li><strong>Billing.</strong> Payment will be charged to your Apple App Store account at confirmation of purchase.</li>
+  <li><strong>Auto-renewal.</strong> Your subscription automatically renews for the same period at the then-current price unless auto-renew is turned off at least 24 hours before the end of the current period.</li>
+  <li><strong>Renewal charge.</strong> The renewal price is charged to your Apple App Store account within 24 hours prior to the end of the current period.</li>
+  <li><strong>Managing the subscription.</strong> You can manage and cancel your subscription at any time by going to your App Store account settings after purchase. Cancellation of the current period is not available; cancellation takes effect at the end of the current period.</li>
+  <li><strong>Free trials and introductory offers.</strong> If a free trial or introductory offer is provided, any unused portion is forfeited when you purchase a subscription.</li>
+  <li><strong>Price changes.</strong> Apple will notify you of any price increase and ask you to opt in before charging the new price.</li>
+</ul>
+
+<h2>5. Refunds</h2>
+<p>All payments are processed by Apple. Refund requests must be made directly to Apple via your App Store purchase history. The Developer does not process refunds. For more information see <a href="https://support.apple.com/en-us/HT204084">Apple's refund support</a>.</p>
+
+<h2>6. SMS Data and Third-Party Destinations</h2>
+<p>The App relies on Apple Shortcuts automation to read SMS content from your device and pass it to a forwarding rule you configure. When the App forwards a message:</p>
+<ul>
+  <li>Message content travels directly from your device to the destination you configured (e.g. an email service, a webhook URL).</li>
+  <li>The Developer's servers do not store the content of forwarded SMS messages.</li>
+  <li>You are solely responsible for the destinations you configure and for ensuring you have the right to forward the messages to those destinations.</li>
+  <li>Once a message is delivered to a third-party destination, that destination's terms and privacy policies apply.</li>
+</ul>
+<p>You must not use the App to forward messages whose forwarding would violate applicable laws (including wiretapping, communications privacy, telecommunications, anti-spam, or data protection laws) or the rights of the message sender or recipient.</p>
+
+<h2>7. Third-Party Services</h2>
+<p>The App incorporates third-party software and services that have their own terms, including but not limited to:</p>
+<ul>
+  <li><strong>Apple App Store and StoreKit</strong> — purchase processing.</li>
+  <li><strong>RevenueCat</strong> — subscription state management.</li>
+  <li><strong>Google Firebase</strong> — analytics, crash reporting, performance monitoring, and remote configuration.</li>
+</ul>
+<p>Your use of these features is also governed by the corresponding third-party terms. The Privacy Policy describes what information is shared with each provider.</p>
+
+<h2>8. Intellectual Property</h2>
+<p>The App, including its source code, user interface, branding, content, and underlying technology, is the property of the Developer or its licensors and is protected by intellectual property laws. These Terms do not grant you any right in or to the App other than the license described above.</p>
+
+<h2>9. User Content and Conduct</h2>
+<p>You retain ownership of the content of any messages you forward. You grant the App permission to read, transmit, and deliver such content solely as needed to perform the forwarding you configured. You are responsible for the accuracy and lawfulness of all content and configurations you provide.</p>
+
+<h2>10. Disclaimer of Warranties</h2>
+<p>To the maximum extent permitted by law, the App is provided "as is" and "as available", without warranties of any kind, whether express, implied, statutory, or otherwise. The Developer specifically disclaims warranties of merchantability, fitness for a particular purpose, non-infringement, accuracy, and uninterrupted or error-free operation. The Developer does not warrant that any specific message will be delivered, that delivery will be timely, or that destinations you configure will accept or process messages.</p>
+
+<h2>11. Limitation of Liability</h2>
+<p>To the maximum extent permitted by law, in no event shall the Developer be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, including but not limited to loss of profits, data, business, goodwill, or other intangible losses, arising out of or related to your use of or inability to use the App. The Developer's total cumulative liability arising from these Terms or your use of the App will not exceed the greater of (a) the amount you paid the Developer through the App in the twelve (12) months immediately preceding the claim, or (b) USD 50.</p>
+<p>Some jurisdictions do not allow the exclusion or limitation of certain damages; in those jurisdictions the limitations apply only to the extent permitted by law.</p>
+
+<h2>12. Indemnification</h2>
+<p>You agree to defend, indemnify, and hold harmless the Developer from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorneys' fees) arising out of or related to (a) your use of the App, (b) your forwarding rules and the messages you forward, or (c) your violation of these Terms or any applicable law.</p>
+
+<h2>13. Termination</h2>
+<p>You may stop using the App at any time and uninstall it from your device. The Developer may suspend or terminate your access to the App, or any feature of it, at any time, for any reason, including violation of these Terms. Provisions that by their nature should survive termination will survive (for example, intellectual property, disclaimers, limitations of liability, and indemnification).</p>
+
+<h2>14. Governing Law and Dispute Resolution</h2>
+<p>Except where prohibited by mandatory local law, these Terms are governed by the laws of the jurisdiction in which the Developer is established, without regard to conflict-of-laws rules. You and the Developer agree to first attempt to resolve any dispute informally by contacting the Developer at the address below. If the dispute cannot be resolved informally, the dispute will be handled by the competent courts of the Developer's jurisdiction. Nothing in this section limits any non-waivable consumer-protection rights you have under the laws of your country of residence.</p>
+
+<h2>15. Regional Provisions</h2>
+<h3>European Economic Area, United Kingdom, and Switzerland</h3>
+<p>If you are a consumer in the EEA, the UK, or Switzerland, mandatory consumer-protection rights of your country of residence apply in addition to these Terms and prevail in case of conflict. You may have the right to withdraw from a digital-content purchase within 14 days, except where you have agreed to begin performance and acknowledged that you lose the right of withdrawal upon doing so (which generally applies to immediate access subscriptions).</p>
+<h3>United States</h3>
+<p>These Terms do not deprive you of any non-waivable rights under the consumer-protection laws of your state. California residents can reach the California Department of Consumer Affairs as described under <em>Consumer Affairs</em> at <a href="https://www.dca.ca.gov">dca.ca.gov</a>.</p>
+<h3>Asia–Pacific</h3>
+<p>If you are a consumer resident in a jurisdiction such as Japan, South Korea, India, Indonesia, the Philippines, Singapore, Hong Kong, Malaysia, Thailand, Vietnam, or Australia/New Zealand, mandatory consumer-protection rights of your country of residence apply in addition to these Terms and prevail in case of conflict.</p>
+
+<h2>16. Apple-Specific Terms</h2>
+<p>The following terms apply because the App is distributed through the Apple App Store:</p>
+<ul>
+  <li>These Terms are concluded between you and the Developer only, not with Apple. The Developer (not Apple) is solely responsible for the App and its content.</li>
+  <li>Apple has no obligation to furnish any maintenance or support services with respect to the App.</li>
+  <li>If the App fails to conform to any applicable warranty, you may notify Apple, and Apple will refund the App purchase price to you. To the maximum extent permitted by law, Apple has no other warranty obligation whatsoever with respect to the App.</li>
+  <li>The Developer, not Apple, is responsible for addressing any claims by you or any third party relating to the App or your possession and use of the App, including product-liability claims, claims that the App fails to conform to legal or regulatory requirements, and claims arising under consumer-protection or similar legislation, including in connection with the App's compliance with the EU Medical Device Regulation, the Health Insurance Portability and Accountability Act (HIPAA), or other applicable health-data regulations.</li>
+  <li>The Developer, not Apple, is responsible for the investigation, defense, settlement, and discharge of any third-party intellectual-property infringement claim related to the App.</li>
+  <li>You represent and warrant that you are not located in a country subject to a U.S. Government embargo or designated as a "terrorist supporting" country, and that you are not on any U.S. Government list of prohibited or restricted parties.</li>
+  <li>Apple and Apple's subsidiaries are third-party beneficiaries of these Terms, and upon your acceptance of these Terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third-party beneficiary.</li>
+</ul>
+
+<h2>17. Changes to These Terms</h2>
+<p>The Developer may update these Terms from time to time. The "Last updated" date at the top of this page indicates the latest revision. Continued use of the App after a change becomes effective constitutes acceptance of the updated Terms. If a change materially reduces your rights, the Developer will use reasonable efforts to notify you in the App or by other appropriate means.</p>
+
+<h2>18. Contact</h2>
+<p>Questions about these Terms can be sent to <a href="mailto:support@monolithgw.com">support@monolithgw.com</a>.</p>
+
+<hr />
+<p class="updated">© 2026 SMS Forwarder. All rights reserved.</p>
+
+</body>
+</html>

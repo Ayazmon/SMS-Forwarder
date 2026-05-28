@@ -1,0 +1,282 @@
+---
+layout: null
+title: Privacy Policy
+include_in_header: false
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Privacy Policy</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #FFFFFF;
+    --fg: #071326;
+    --muted: #3A6090;
+    --border: #C2D5EE;
+    --accent: #3B82F6;
+    --table-row: #F4F8FF;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #060D1A;
+      --fg: #E0ECFF;
+      --muted: #6C8EBA;
+      --border: #1B2E47;
+      --accent: #3B82F6;
+      --table-row: #0D1829;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    padding: 24px max(env(safe-area-inset-left), 20px) 32px max(env(safe-area-inset-right), 20px);
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    letter-spacing: -0.4px;
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 28px 0 8px;
+    letter-spacing: -0.2px;
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 20px 0 6px;
+  }
+  p, li { font-size: 15px; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  .updated {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 0 0 24px;
+  }
+  .note {
+    border-left: 3px solid var(--accent);
+    padding: 10px 14px;
+    background: color-mix(in oklab, var(--accent) 8%, transparent);
+    border-radius: 6px;
+    font-size: 14px;
+    margin: 16px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 16px;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th { font-weight: 600; }
+  tr:nth-child(even) td { background: var(--table-row); }
+  hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 32px 0;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  strong { font-weight: 600; }
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 13px;
+    background: color-mix(in oklab, var(--accent) 10%, transparent);
+    padding: 1px 5px;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: May 4, 2026</p>
+
+<p>This Privacy Policy explains how the SMS Forwarder mobile application (the "<strong>App</strong>") collects, uses, shares, and protects information about you. The App is provided by the developer of SMS Forwarder (the "<strong>Developer</strong>", "we", "us", or "our"). By using the App, you agree to the practices described here.</p>
+
+<div class="note">
+  <strong>In short.</strong> The App stores your forwarding configuration locally on your device and on our backend so it can be restored across reinstalls. The content of forwarded SMS messages travels directly from your device to the destinations you configure (such as your email or webhook URL) and is <strong>not</strong> stored on our servers. We use Apple, RevenueCat, and Google Firebase as service providers — what each receives is detailed below.
+</div>
+
+<h2>1. Who We Are and Scope</h2>
+<p>The Developer is the data controller (or, where applicable, the business) for personal data processed through the App. This Policy applies to information processed via the App and via the Developer's API used by the App. It does not apply to third-party services that you separately integrate with — for example, the email provider, webhook endpoint, or messaging platform you select as a forwarding destination — which are governed by their own privacy policies.</p>
+
+<h2>2. Information We Collect</h2>
+
+<h3>2.1 Information you provide</h3>
+<ul>
+  <li><strong>Forwarding rules.</strong> The name you assign to a rule, the destination type (e.g. email, webhook, Slack, Discord, Teams, WhatsApp), and the destination details you enter (such as an email address or a webhook URL).</li>
+  <li><strong>Test recipient phone number.</strong> If you use the "Send Test SMS" feature, the phone number you enter is stored locally on your device and pre-filled the next time. It is never transmitted to our servers or to analytics providers.</li>
+  <li><strong>App preferences.</strong> Theme, language, notification preference, analytics opt-out preference, and onboarding state — stored locally on your device.</li>
+</ul>
+
+<h3>2.2 Information collected automatically</h3>
+<ul>
+  <li><strong>Device and app information.</strong> Device model identifier, iOS version, App version, language and region, Apple identifier-for-vendor (IDFV).</li>
+  <li><strong>Push notification token</strong> (if you grant notification permission), used to deliver alerts about your rules and subscription.</li>
+  <li><strong>Subscription state.</strong> Whether you have an active subscription, the active subscription product identifier, and its expiration date — derived from RevenueCat / the Apple App Store.</li>
+  <li><strong>Diagnostics.</strong> Crash reports, anonymized performance metrics, and aggregated usage events (for example: a paywall was viewed, a button was tapped, a purchase was initiated). Diagnostics are subject to your in-app analytics opt-out.</li>
+</ul>
+
+<h3>2.3 What we do <em>not</em> collect</h3>
+<ul>
+  <li>The text content of SMS messages you forward.</li>
+  <li>The phone numbers of senders or recipients of forwarded messages.</li>
+  <li>Your contacts, calendars, photos, or location.</li>
+  <li>Your real name, email address, or password (the App does not require account creation).</li>
+</ul>
+
+<h2>3. How SMS Forwarding Works</h2>
+<p>The App relies on Apple Shortcuts automation, which you set up on your device. When an SMS arrives:</p>
+<ol>
+  <li>Your iOS Shortcut reads the message content and any sender info exposed by iOS.</li>
+  <li>It passes that information to the App's <em>Forward SMS</em> action.</li>
+  <li>The App immediately sends the message to the destination you configured (for example, an email API or a webhook URL).</li>
+  <li>The App does not retain the message content after delivery, and the message content is never sent to the Developer's backend or any analytics provider.</li>
+</ol>
+
+<h2>4. How We Use Information</h2>
+<ul>
+  <li><strong>To provide the service.</strong> Saving and retrieving your forwarding rules, syncing them across reinstalls, sending push notifications you have opted into, and processing subscriptions through Apple.</li>
+  <li><strong>To maintain quality and security.</strong> Diagnosing crashes, monitoring performance, and protecting against abuse.</li>
+  <li><strong>To improve the App.</strong> Aggregated, opt-out-able analytics events used to understand which features are working.</li>
+  <li><strong>To communicate with you.</strong> Replying to support requests you initiate.</li>
+  <li><strong>To comply with law.</strong> Where required by law or legal process.</li>
+</ul>
+
+<h2>5. Legal Bases for Processing (EEA / UK / Switzerland)</h2>
+<p>If you are in the European Economic Area, the United Kingdom, or Switzerland, we rely on the following legal bases under the GDPR / UK GDPR:</p>
+<ul>
+  <li><strong>Performance of a contract</strong> — to operate the App and deliver the features you request (e.g. saving and syncing rules, processing subscriptions).</li>
+  <li><strong>Legitimate interests</strong> — to keep the App secure, prevent abuse, debug crashes, and maintain product quality, balanced against your privacy interests.</li>
+  <li><strong>Consent</strong> — for non-essential analytics, where we collect it through the in-app analytics opt-in. You can withdraw consent at any time in <em>Settings → Share Anonymous Analytics</em>.</li>
+  <li><strong>Legal obligation</strong> — to comply with applicable laws.</li>
+</ul>
+
+<h2>6. Service Providers and Recipients of Data</h2>
+<p>We share information only with the categories of recipients below, only to the extent needed for the listed purpose.</p>
+
+<table>
+  <thead>
+    <tr><th>Recipient</th><th>Purpose</th><th>Data shared</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Apple Inc.</strong> (App Store, StoreKit, Push Notification Service)</td>
+      <td>Distribution, in-app purchases, push notifications.</td>
+      <td>Subscription transactions and receipts; push notification tokens.</td>
+    </tr>
+    <tr>
+      <td><strong>RevenueCat, Inc.</strong></td>
+      <td>Subscription state management, restore purchases, customer info.</td>
+      <td>Anonymous App User ID, Apple App Store receipts, subscription product identifiers, country/region.</td>
+    </tr>
+    <tr>
+      <td><strong>Google LLC</strong> (Firebase Analytics, Crashlytics, Performance Monitoring, Remote Config)</td>
+      <td>Crash diagnostics, performance metrics, feature flagging, aggregated usage analytics.</td>
+      <td>App and device metadata (App version, iOS version, device model, locale, IDFV), aggregated event names with non-identifying parameters, crash stack traces. No SMS content is sent to Firebase. Subject to your in-app analytics opt-out.</td>
+    </tr>
+    <tr>
+      <td><strong>Developer's own backend</strong> (<code>monolithgw.com</code>)</td>
+      <td>Storing your forwarding rules and device record so they can be restored across reinstalls.</td>
+      <td>Device UUID (IDFV), phone model, OS version, App version, push notification token, subscription product identifier, subscription expiration date, your forwarding rule names and destination details. No SMS content is stored.</td>
+    </tr>
+    <tr>
+      <td><strong>Forwarding destinations you configure</strong></td>
+      <td>Delivering forwarded SMS messages to where you asked them to go.</td>
+      <td>The content of the SMS, plus sender info exposed by iOS — sent only to the destination you set (your email server, your webhook, etc.).</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Each of these recipients has its own privacy policy. You can review them at:</p>
+<ul>
+  <li>Apple — <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></li>
+  <li>RevenueCat — <a href="https://www.revenuecat.com/privacy/">revenuecat.com/privacy</a></li>
+  <li>Google Firebase — <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></li>
+</ul>
+
+<h2>7. International Data Transfers</h2>
+<p>Some of our service providers process information in the United States or other countries that may have different data-protection laws than your country of residence. Where required (for example, transfers from the EEA / UK / Switzerland to a third country without an adequacy decision), we rely on lawful transfer mechanisms such as the European Commission's Standard Contractual Clauses or the EU–US Data Privacy Framework, where applicable.</p>
+
+<h2>8. Data Retention</h2>
+<ul>
+  <li><strong>On your device.</strong> Local data (rules, preferences, the test recipient phone number) is kept until you delete the App or clear it manually.</li>
+  <li><strong>Developer's backend.</strong> Forwarding rules and the associated device record are kept until you delete the App and request deletion, or until two (2) years after your last use of the App, whichever comes first.</li>
+  <li><strong>RevenueCat.</strong> Subscription records are kept as long as needed for tax, accounting, and entitlement-restoration purposes, then deleted or de-identified.</li>
+  <li><strong>Firebase Analytics / Crashlytics.</strong> Retained per Firebase's defaults — generally up to 14 months for events and up to 90 days for crash data — unless we change the retention setting.</li>
+</ul>
+
+<h2>9. Security</h2>
+<p>We use industry-standard safeguards including TLS for data in transit and reputable cloud providers for data at rest. No method of transmission or storage is 100% secure; we cannot guarantee absolute security but we work to minimize risk.</p>
+
+<h2>10. Children's Privacy</h2>
+<p>The App is not directed to children under the age of 13 (or the equivalent minimum age in your country). We do not knowingly collect personal information from such children. If you believe a child under that age has provided personal information to us, please contact us so we can delete it.</p>
+
+<h2>11. Your Rights</h2>
+
+<h3>11.1 Common rights</h3>
+<p>Depending on where you live, you may have some or all of the following rights:</p>
+<ul>
+  <li>Access a copy of the personal information we hold about you.</li>
+  <li>Correct inaccurate information.</li>
+  <li>Delete personal information.</li>
+  <li>Restrict or object to certain processing.</li>
+  <li>Receive a portable copy of your information.</li>
+  <li>Withdraw any consent you have given.</li>
+  <li>Lodge a complaint with your local data-protection authority.</li>
+</ul>
+<p>To exercise these rights, contact <a href="mailto:support@monolithgw.com">support@monolithgw.com</a>. We may need to verify your identity (for example by confirming you control the device UUID associated with your data). We will respond within the time required by your local law.</p>
+
+<h3>11.2 European Economic Area / United Kingdom / Switzerland</h3>
+<p>The rights described above apply under the GDPR and UK GDPR. You can also withdraw consent for analytics in <em>Settings → Share Anonymous Analytics</em> at any time, without affecting prior processing.</p>
+
+<h3>11.3 California</h3>
+<p>Under the California Consumer Privacy Act / California Privacy Rights Act (CCPA / CPRA) you have the rights to know, delete, correct, and to data portability described above. We do not "sell" personal information and we do not "share" it for cross-context behavioral advertising. We do not knowingly process the personal information of minors under 16 for sale or sharing. We will not discriminate against you for exercising your rights.</p>
+
+<h3>11.4 Other U.S. states</h3>
+<p>Residents of states with comprehensive consumer-privacy laws (including but not limited to Virginia, Colorado, Connecticut, Utah, Oregon, Texas, and Montana) have similar rights to those listed in section 11.1.</p>
+
+<h3>11.5 Asia–Pacific</h3>
+<p>If you reside in a jurisdiction with a comprehensive personal-data law — for example Japan (APPI), South Korea (PIPA), India (DPDP Act), Singapore (PDPA), Indonesia (PDP), Malaysia (PDPA), Thailand (PDPA), Vietnam (PDPD), the Philippines (DPA), Australia (Privacy Act), or New Zealand (Privacy Act) — you have rights of access, correction, deletion, and complaint to your local supervisory authority. Contact us at the address above to exercise these rights.</p>
+
+<h2>12. Permissions Used</h2>
+<ul>
+  <li><strong>Notifications</strong> (optional) — to inform you about subscription, automation, or rule events.</li>
+  <li><strong>Network access</strong> (always required) — to sync your rules with the Developer's backend, fetch subscription state from RevenueCat, and send diagnostics to Firebase.</li>
+  <li><strong>App Intents / Shortcuts</strong> — required so your iOS Shortcut can pass SMS content to the App's <em>Forward SMS</em> action.</li>
+</ul>
+
+<h2>13. Cookies and Similar Technologies</h2>
+<p>The App is a native iOS application and does not use browser cookies. The Apple Identifier-for-Vendor (IDFV) is used as a stable, app-vendor-scoped identifier; it is not the IDFA and we do not use it for cross-app or cross-developer tracking.</p>
+
+<h2>14. Changes to This Policy</h2>
+<p>We may update this Policy from time to time. The "Last updated" date at the top reflects the latest revision. If a change is material, we will use reasonable efforts to notify you in the App or by other means before it takes effect.</p>
+
+<h2>15. Contact</h2>
+<p>For privacy questions or to exercise your rights, contact us at <a href="mailto:support@monolithgw.com">support@monolithgw.com</a>. For general support, contact <a href="mailto:support@monolithgw.com">support@monolithgw.com</a>.</p>
+
+<hr />
+<p class="updated">© 2026 SMS Forwarder. All rights reserved.</p>
+
+</body>
+</html>
