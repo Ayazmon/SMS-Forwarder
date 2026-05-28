@@ -1,60 +1,81 @@
 ---
 layout: page
 title: Privacy Policy
-include_in_header: false
+include_in_header: true
 ---
 
 **Last updated**  
-August 1 2019
+May 28 2026
 
 # Privacy Policy
-Submissive a when owing much far bawdy thanks impolitely alas overlaid one and this one chuckled darn on more due much misheard amused far far the much purposeful that wildebeest dalmatian and piranha bluebird this and much despite however much sincere nonsensical this paradoxically more.
 
-**Please note:** This is purely a dummy Privacy Policy that serves as an example for how you can use this app landing page generator. Please replace the contents with your own privacy policy.
-
-<br>
-
-## 1.0 Information We Collect
-Far near but lighted walking far oyster hello kneeled flung and roadrunner and more witless narrowly flexed brokenly blandly much in famous jeez obsessive that.
-
-### 1.1 Information from third parties
-- Ouch until smirked some some newt that at frustrating.
-- Nimbly handsomely fabulously python.
-- Alas informally taped when a dear some.
-
-### 1.2 Information you provide to us 
-Menacingly much walrus far together derisive falcon the toneless unceremoniously yet yikes a hung when because far drooled cast amused naughtily quiet hare a thickly more dogged drank more this dismounted since hence nakedly jeez rolled far gerbil the hey puerilely where vociferously struck insane much twitched instead some beneath then wiped dull snuffed far jeez nightingale bit goodness obscurely quit that much yet nefarious careless some concrete shrewdly gull closed this hugged aboard.
+SMS Forwarder is built with privacy as a first-class concern. This page explains, in plain English, what we do — and just as importantly, what we *don't* do — with the data that passes through the app.
 
 <br>
 
-## 2.0 What Personal Information we collect about you and how we collect it
-Where cut one reproachful alas ambiguous helpful hen raucous editorial underwrote dubiously therefore this boastfully or possessively oh modest amidst some opposite far wasp grew emu snickered some jeepers and circa much that *equitable* foul camel caudally oh opossum far dear met far much close hello beheld facetious far goodness tidily reindeer that kiwi thus crud that paid and by titilatingly hey falcon lemming or well approving sympathetically groundhog mongoose and deeply peaceful wow ouch far regally this and near and badly fatal blunt mischievously and and the blew.
+## 1.0 What SMS Forwarder Does
 
-### 2.1 Third Parties we collect information from
-Various remotely save this querulously explicitly one this and far congenially broad grew said or abhorrently haltered darn beheld panther shrank and one goldfish the more away as much different moth.
+SMS Forwarder is an iOS app that helps you set up an **Apple Shortcuts automation** on your iPhone. The automation triggers when an SMS arrives, applies the forwarding rules you've configured, and routes the message to a destination you choose — email, Telegram, WhatsApp, Slack, Discord, or a webhook.
 
-| Third Party | What is it used for? |
-| :--- | :--- |
-| Falcon | Tidily reindeer that kiwi thus crud that paid and by titilatingly hey falcon lemming. |
-| Eagle | Juggled crud a however overslept vehemently kept indisputably anteater walked alas or into. |
+All of this happens on your device. The app itself is the configurator; Apple Shortcuts is the delivery mechanism.
 
 <br>
 
-## 3.0 What rights do you, as the data subject, have
-This goodness well well and more cowardly lynx credibly more apart save and less oh examined ouch marginal growled and proper liberally salmon busy some while pointed far because understood.
+## 2.0 Information We Collect
 
-1. Boastfully or possessively oh modest amidst.
-2. Far far the much purposeful that wildebeest dalmatian.
-3. Adamant or pushed less far overthrew.
+### 2.1 Information stored locally on your device
+The app stores the following on your iPhone only, using Apple's `SwiftData` framework:
 
-All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+- Your forwarding rules (sender filters, keyword filters, schedules)
+- Your chosen destinations and their connection details (e.g. Telegram chat ID, Slack webhook URL)
+- App preferences (theme, language)
+
+This information **never leaves your device** unless required to deliver a forwarded message to the destination you picked.
+
+### 2.2 Information we never collect
+- We do not collect, store, or transmit the **content of your SMS messages**.
+- We do not maintain a server-side log of messages you forward.
+- We do not collect contacts, location, advertising identifiers, or analytics tied to a user identity.
 
 <br>
 
-## 4.0 How we store and secure the Personal Information we collect
-Worm where gravely behind logically far in tastefully as alas delicately before well darn then far the much pulled red-handed circa much much far pangolin spelled much clung dachshund smirked close some the adamant or pushed less far overthrew in moth begrudging warthog newt pragmatic bent darn and far needlessly notwithstanding angrily as celestially horse rebuking magnanimous dear inscrutably jeepers listless before saucy this much however and wolf dear cringed crab a wanton jeepers flatteringly characteristically a atrocious and returned more lemming robin let some crud that more secure nimble where soundly pitiful because bombastic much.
+## 3.0 How Forwarding Works
+
+When the Apple Shortcuts automation fires, the SMS payload (sender, timestamp, body) is passed to SMS Forwarder's encrypted relay so it can reach the destination you chose. The payload is:
+
+- Wrapped in **RSA-OAEP-SHA256** encryption before it leaves your device
+- Tagged with a fresh **UUID nonce** and timestamp for replay protection
+- Delivered straight to your chosen destination's API (Telegram bot, Slack webhook, email gateway, etc.)
+- **Not stored** at rest on our infrastructure once delivered
+
+The third-party destination you pick (e.g. Telegram, Slack, your email provider) has its own privacy practices that govern what they do with the forwarded message after delivery. We have no control over those services.
 
 <br>
 
-## 5.0 Information processing and transfers for EEA individuals
-Cracked a more and iguana a without some echidna a abnormal hello and beat thanks jeepers gnu jeepers until up depending for drooled awfully angelfish relentless much a well wasp some in impala darn and overate greedily wow kookaburra beneath much wistful fluid until and lemming less armadillo redoubtable after much capybara wow that hence interbred timorous loosely oh.
+## 4.0 Your Rights
+
+Because everything is stored on your device:
+
+1. You can **inspect** every rule and destination from inside the app.
+2. You can **delete** any rule, destination, or the entire data store at any time by removing them in-app or deleting the app from your device.
+3. You can **stop** forwarding instantly by disabling the Apple Shortcuts automation.
+
+There is no account to delete and no cloud profile to reset — everything lives with you.
+
+<br>
+
+## 5.0 Children
+
+SMS Forwarder is a general-purpose utility and is not directed at children under 13. We do not knowingly collect information from children.
+
+<br>
+
+## 6.0 Changes to this Policy
+
+If we change this policy, we will update the **Last updated** date at the top of the page and publish the new version at this URL. Material changes will be highlighted in the app's release notes.
+
+<br>
+
+## 7.0 Contact
+
+Questions, concerns or feedback about this policy? Reach the developer at **[hoholapps@gmail.com](mailto:hoholapps@gmail.com)**.
