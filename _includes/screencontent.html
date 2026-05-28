@@ -1,47 +1,45 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+{%- assign screenshots = "" | split: "" -%}
+{%- for file in site.static_files -%}
+    {%- if file.path contains 'assets/screenshot/' -%}
+        {%- assign screenshots = screenshots | push: file.path -%}
+    {%- endif -%}
+{%- endfor -%}
+{%- assign screenshots = screenshots | sort -%}
 
-{% for file in site.static_files %}
-    {% if file.path contains 'assets/screenshot/' %}
-        <script>
-            $(function() {
-                $(".iphoneScreen").attr('src', '{{ site.github.baseurl }}{{ file.path }}');
-                $(".iphoneScreen").removeClass("hidden");
-                console.log("{{ file.path }}");
-            });
-        </script>
-    {% elsif file.path contains 'assets/videos/' %}
-        {% unless file.path contains 'assets/videos/Place-video-files-here.txt' %}
-            <script>
-                $(function() {
-                    $(".iphoneScreen").addClass("hidden");
-                    console.log("remove screenshot");
-                });
-            </script>
-        {% endunless %}
-        {% if file.extname == ".mov" or file.extname == ".mp4" %}
-            <script>
-                $(function() {
-                    $(".videoContainer").removeClass("hidden");
-                    $(".screenvideo").append('<source src="{{ site.github.baseurl }}{{ file.path }}" type="video/mp4">');
-                    console.log("{{ file.path }}");
-                });
-            </script>
-        {% elsif file.extname == ".ogg" %}
-            <script>
-                $(function() {
-                    $(".videoContainer").removeClass("hidden");
-                    $(".screenvideo").append('<source src="{{ site.github.baseurl }}{{ file.path }}" type="video/ogg">');
-                    console.log("{{ file.path }}");
-                });
-            </script>
-        {% elsif file.extname == ".webm" %}
-        <script>
-            $(function() {
-                $(".videoContainer").removeClass("hidden");
-                $(".screenvideo").append('<source src="{{ site.github.baseurl }}{{ file.path }}" type="video/webm">');
-                console.log("{{ file.path }}");
-            });
-        </script>
-        {% endif %}
-    {% endif %}
-{% endfor %}
+<div class="iphoneScreen carousel">
+    <div class="carouselTrack">
+        {%- for path in screenshots -%}
+            <img class="carouselSlide" src="{{ site.github.baseurl }}{{ path }}" alt="">
+        {%- endfor -%}
+    </div>
+</div>
+<div class="carouselDots">
+    {%- for path in screenshots -%}
+        <button type="button" class="carouselDot{% if forloop.first %} active{% endif %}" data-index="{{ forloop.index0 }}" aria-label="Show screenshot {{ forloop.index }}"></button>
+    {%- endfor -%}
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$(function() {
+    var $track = $('.carouselTrack');
+    var $dots = $('.carouselDot');
+    if (!$track.length || !$dots.length) return;
+
+    function updateDots() {
+        var width = $track.outerWidth();
+        if (!width) return;
+        var idx = Math.round($track.scrollLeft() / width);
+        $dots.removeClass('active').eq(idx).addClass('active');
+    }
+
+    $track.on('scroll', function() {
+        window.requestAnimationFrame(updateDots);
+    });
+
+    $dots.on('click', function() {
+        var idx = parseInt($(this).attr('data-index'), 10) || 0;
+        $track.animate({ scrollLeft: idx * $track.outerWidth() }, 250);
+    });
+});
+</script>

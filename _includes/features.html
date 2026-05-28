@@ -3,11 +3,12 @@
     {% for feature in site.features %}
 
     {% if feature.title %}
+    {% assign fa_prefix = feature.fontawesome_icon_prefix | default: 'fas' %}
     <div class="feature">
         <div>
             <span class="fa-stack fa-1x">
                 <i class="iconBack fas fa-circle fa-stack-2x"></i>
-                <i class="iconTop fas fa-{{ feature.fontawesome_icon_name }} fa-stack-1x"></i>
+                <i class="iconTop {{ fa_prefix }} fa-{{ feature.fontawesome_icon_name }} fa-stack-1x"></i>
             </span>
         </div>
         <div class="featureText">

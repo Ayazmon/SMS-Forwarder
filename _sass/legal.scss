@@ -1,0 +1,104 @@
+// Styles for legal pages (privacy policy, terms of service).
+// Qualified with .markdown-body so the selectors win over github-markdown
+// defaults that share specificity (.markdown-body h1, .markdown-body p, etc.).
+
+.markdown-body .legal-page {
+	color: $feature-title-color;
+
+	h1 {
+		font-size: 26px;
+		font-weight: 700;
+		letter-spacing: -0.4px;
+		margin: 0 0 4px;
+	}
+
+	h2 {
+		font-size: 18px;
+		font-weight: 600;
+		letter-spacing: -0.2px;
+		margin: 28px 0 8px;
+	}
+
+	h3 {
+		font-size: 15px;
+		font-weight: 600;
+		margin: 20px 0 6px;
+	}
+
+	p, li {
+		font-size: 15px;
+		line-height: 1.5;
+	}
+
+	ul, ol {
+		padding-left: 22px;
+	}
+
+	li {
+		margin-bottom: 6px;
+	}
+
+	.updated {
+		color: $feature-text-color;
+		font-size: 13px;
+		margin: 0 0 24px;
+	}
+
+	.note {
+		border-left: 3px solid $accent-color;
+		padding: 10px 14px;
+		background: rgba($accent-color, 0.08);
+		border-radius: 6px;
+		font-size: 14px;
+		margin: 16px 0;
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		margin: 12px 0 16px;
+		font-size: 14px;
+	}
+
+	th, td {
+		text-align: left;
+		padding: 10px 12px;
+		border-bottom: 1px solid #C2D5EE;
+		vertical-align: top;
+	}
+
+	th {
+		font-weight: 600;
+	}
+
+	tr:nth-child(even) td {
+		background: #F4F8FF;
+	}
+
+	hr {
+		border: none;
+		border-top: 1px solid #C2D5EE;
+		margin: 32px 0;
+	}
+
+	a {
+		color: $accent-color;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	strong {
+		font-weight: 600;
+	}
+
+	code {
+		font-family: ui-monospace, "SF Mono", Menlo, monospace;
+		font-size: 13px;
+		background: rgba($accent-color, 0.1);
+		padding: 1px 5px;
+		border-radius: 4px;
+	}
+}

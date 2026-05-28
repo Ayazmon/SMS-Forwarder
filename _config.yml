@@ -5,7 +5,7 @@ page_title                                : SMS Forwarder - Text, OTP, 2FA
 ios_app_id                                : 6766184874
 ios_app_country                           : us
 
-appstore_link                             :
+appstore_link                             : https://apps.apple.com/app/id6766184874
 playstore_link                            :
 presskit_download_link                    :
 
@@ -19,10 +19,10 @@ enable_smart_app_banner                   : true
 
 
 # Information About Yourself
-your_name                                 : Hohol Apps
+your_name                                 :
 your_link                                 :
 your_city                                 :
-email_address                             : hoholapps@gmail.com
+email_address                             : support@monolithgw.com
 linkedin_username                         :
 linkedin_company                          :
 facebook_username                         :
@@ -43,19 +43,23 @@ features                                  :
 
   - title                                 : Forward to Telegram
     description                           : Route messages to yourself or a group via a dedicated Telegram bot. Fast, free and reliable.
-    fontawesome_icon_name                 : paper-plane
+    fontawesome_icon_name                 : telegram
+    fontawesome_icon_prefix               : fab
 
   - title                                 : Forward to WhatsApp
     description                           : Send incoming SMS straight to a WhatsApp contact or number of your choice.
     fontawesome_icon_name                 : whatsapp
+    fontawesome_icon_prefix               : fab
 
   - title                                 : Forward to Slack
     description                           : Pipe client texts and team notifications into any Slack channel, instantly.
     fontawesome_icon_name                 : slack
+    fontawesome_icon_prefix               : fab
 
   - title                                 : Forward to Discord
     description                           : Deliver SMS to a Discord channel — great for communities, alerts and personal automations.
     fontawesome_icon_name                 : discord
+    fontawesome_icon_prefix               : fab
 
   - title                                 : Forwarding Rules
     description                           : Map specific senders or keywords to specific destinations. Send banking codes to email, family messages to Telegram — your call.
@@ -80,13 +84,13 @@ topbar_color                              : "#060D1A"
 topbar_transparency                       : 0.1
 topbar_title_color                        : "#FFFFFF"
 
-cover_image                               : assets/headerimage.png
+cover_image                               :
 cover_overlay_color                       : "#060D1A"
 cover_overlay_transparency                : 0.75
 
 device_color                              : black
 
-body_background_color                     : "#FFFFFF"
+body_background_color                     : "#EBF2FF"
 
 link_color                                : "#3B82F6"
 
@@ -127,6 +131,11 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  - vendor
+  - .bundle
+  - Gemfile
+  - Gemfile.lock
+  - DEVELOPMENT_LOG.md
 
 collections:
   pages:
