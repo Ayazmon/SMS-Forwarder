@@ -1,3 +1,7 @@
+# Site URL (for GitHub Pages project repo at ayazmon.github.io/SMS-Forwarder/)
+url                                       : https://ayazmon.github.io
+baseurl                                   : /SMS-Forwarder
+
 #page title
 page_title                                : SMS Forwarder - Text, OTP, 2FA
 
